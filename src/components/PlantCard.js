@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 
-function PlantCard({ plantName, plantImage, plantPrice }) {
+function PlantCard({ plantName, plantImage, plantPrice, plantId, onDeletePlant, plant }) {
 
   const [inStock, setInStock] = useState(true);
 
   function soldOut() {
     setInStock(!inStock);
+  }
+
+  // console.log(plantId);
+
+  function onDeleteButton() {
+    fetch(`http://localhost:6001/plants/${plantId}`, {
+      method: "DELETE"
+    })
+      .then(res => res.json())
+      .then(data => onDeletePlant(plantId))
   }
 
 
@@ -19,6 +29,7 @@ function PlantCard({ plantName, plantImage, plantPrice }) {
       ) : (
         <button onClick={soldOut}>Out of Stock</button>
       )}
+      <button onClick={onDeleteButton}>Delete</button>
     </li>
   );
 }

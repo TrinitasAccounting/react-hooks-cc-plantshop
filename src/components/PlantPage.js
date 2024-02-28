@@ -33,6 +33,14 @@ function PlantPage() {
   });
 
 
+  function handleDeletePlant(deletedPlantId) {
+    const updatedPlantsList = plantsToShow.filter((plant) => {
+      return (plant.id !== deletedPlantId)
+    })
+    setPlantsToShow(updatedPlantsList);
+  }
+
+
 
 
 
@@ -43,7 +51,7 @@ function PlantPage() {
     <main>
       <NewPlantForm onAddPlant={onAddPlant} />
       <Search updateSearchText={updateSearchText} />
-      <PlantList plantsToShow={filteredPlantsList} />
+      <PlantList plantsToShow={filteredPlantsList} onDeletePlant={handleDeletePlant} />
     </main>
   );
 }
