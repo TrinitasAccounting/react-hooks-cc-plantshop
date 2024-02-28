@@ -41,6 +41,24 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "asdf",
+      "image": "https://thecozycook.com/wp-content/uploads/2023/02/Homemade-Ramen-f.jpg",
+      "price": "22",
+      "id": 8
+    },
+    {
+      "name": "Earth",
+      "image": "https://www.astronomy.com/wp-content/uploads/sites/2/2021/09/ASYSK1017_01.jpg?fit=3000%2C3075",
+      "price": "300000",
+      "id": 9
+    },
+    {
+      "name": "Jupiter",
+      "image": "https://cdn.mos.cms.futurecdn.net/Mza6ccKYF6WVrqZekTtJxN-1200-80.jpg",
+      "price": "90000000",
+      "id": 10
     }
   ]
 }
